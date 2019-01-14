@@ -47,7 +47,7 @@ class PetsController < ApplicationController
 
     @pet.save
 
-    redirect "/pets/#{@ped.id}"
+    redirect "/pets/#{@pet.id}"
 
   end
 end
