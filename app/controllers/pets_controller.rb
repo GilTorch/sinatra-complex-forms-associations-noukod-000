@@ -36,13 +36,13 @@ class PetsController < ApplicationController
   end
 
   patch '/pets/:id' do
+    raise params.inspect
     @pet=Pet.find_by_id(@params[:id])
     @pet.name=@params[:pet_name]
     @pet.owner=Owner.find_by_id(@params[:pet][:owner_id])
     #binding.pry
 
     @pet.owner = Owner.create @params[:owner] unless params[:owner][:name].empty?
-
 
     @pet.save
 
