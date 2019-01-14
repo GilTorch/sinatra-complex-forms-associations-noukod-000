@@ -37,6 +37,6 @@ class PetsController < ApplicationController
 
   patch '/pets/:id' do
     @pet=Pet.find_by_id(@params[:id])
-  
+
   end
 end
