@@ -6,7 +6,7 @@
  <input type="text" name="pet_name" value="<%=@pet.name%>"/>
  <% @owners.each do |owner| %>
   <label>Name: <%=owner.name%></label>
-  <input type="checkbox" id="<%=owner.id%>" name="pet[owner_id]" <%='checked' if owner.id==@pet.owner.id %> value="<%=owner.id%>" />
+  <input type="radio" id="<%=owner.id%>" name="pet[owner_id]" <%='checked' if owner.id==@pet.owner.id %> value="<%=owner.id%>" />
  <% end %>
   Pet Owner:
   <input id="owner_name" type="text" name="owner[name]" value="<%=@pet.owner.name%>"/>
