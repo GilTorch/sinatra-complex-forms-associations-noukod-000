@@ -39,7 +39,7 @@ class PetsController < ApplicationController
     @pet=Pet.find_by_id(@params[:id])
     @pet.name=@params[:pet_name]
     @pet.owner=Owner.find_by_id(@params[:pet][:owner_id])
-
+    binding.pry
     if @params[:owner][:name]!=nil
       @pet.owner.name=@params[:owner][:name]
     end
